@@ -5,8 +5,8 @@
 <script>
 	let email,
 		password = "";
-	const submitLogin = (email, password) => {
-		login(email, password);
+	const submitLogin = async(email, password) => {
+		await login(email, password);
 	};
 </script>
 
