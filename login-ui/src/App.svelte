@@ -1,4 +1,13 @@
+<script context="module">
+	import { login } from "./util";
+</script>
+
 <script>
+	let email,
+		password = "";
+	const submitLogin = (email, password) => {
+		login(email, password);
+	};
 </script>
 
 <style>
@@ -44,9 +53,12 @@
 
 <main>
 	<div class="flex-col">
-		<input type="text" placeholder="Email address or phone number" />
-		<input type="password" placeholder="Password" />
-		<button class="login">Login</button>
+		<input
+			type="text"
+			bind:value={email}
+			placeholder="Email address or phone number" />
+		<input type="password" bind:value={password} placeholder="Password" />
+		<button class="login" on:click={()=>submitLogin(email,password)}>Login</button>
 	</div>
 
 	<div class="flex-col">
