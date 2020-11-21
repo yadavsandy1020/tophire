@@ -1,8 +1,10 @@
 {
   "name": "login-auth-service",
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "env-cmd -f ./.env nodemon app.js"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "express": "^4.17.1",
@@ -10,5 +12,9 @@
     "mongodb": "^3.6.3",
     "mongoose": "^5.10.15",
     "validator": "^13.1.17"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.1.0",
+    "nodemon": "^2.0.6"
   }
 }
